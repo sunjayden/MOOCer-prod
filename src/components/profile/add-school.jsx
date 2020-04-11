@@ -169,7 +169,7 @@ class AddSchool extends Component {
               type="text"
               fullWidth
               variant="outlined"
-              onChange={() => this.schoolChange.bind(this)}
+              onChange={this.schoolChange.bind(this)}
             />
           </Col>
         </Row>
@@ -182,7 +182,7 @@ class AddSchool extends Component {
               label="Degree"
               fullWidth
               variant="outlined"
-              onChange={() => this.degreeChange.bind(this)}
+              onChange={this.degreeChange.bind(this)}
             />
           </Col>
           <Col xs={6}>
@@ -192,7 +192,7 @@ class AddSchool extends Component {
               label="Major"
               fullWidth
               variant="outlined"
-              onSelect={() => this.majorChange.bind(this)}
+              onSelect={this.majorChange.bind(this)}
             />
           </Col>
         </Row>

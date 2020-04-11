@@ -197,7 +197,7 @@ class AddExperience extends Component {
             <Row>
               <Col>
                 <DatePicker
-                  dateFormat="MMMM d, yyyy"
+                  dateFormat="MMMM, yyyy"
                   selected={this.state.endDate}
                   onSelect={this.endDateChange.bind(this)}
                 />

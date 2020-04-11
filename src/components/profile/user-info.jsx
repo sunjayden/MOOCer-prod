@@ -170,7 +170,7 @@ class UpdateUserInfo extends Component {
               fullWidth
               variant="outlined"
               value={this.state.firstName}
-              onChange={() => this.firstNameChange.bind(this)}
+              onChange={this.firstNameChange.bind(this)}
             />
           </Col>
           <Col xs={6}>
@@ -180,7 +180,7 @@ class UpdateUserInfo extends Component {
               fullWidth
               variant="outlined"
               value={this.state.lastName}
-              onChange={() => this.lastNameChange.bind(this)}
+              onChange={this.lastNameChange.bind(this)}
             />
           </Col>
         </Row>
@@ -192,7 +192,7 @@ class UpdateUserInfo extends Component {
               fullWidth
               variant="outlined"
               value={this.state.title}
-              onChange={() => this.titleChange.bind(this)}
+              onChange={this.titleChange.bind(this)}
             />
           </Col>
           <Col xs={6}>
@@ -202,7 +202,7 @@ class UpdateUserInfo extends Component {
               fullWidth
               variant="outlined"
               value={this.state.location}
-              onChange={() => this.locationChange.bind(this)}
+              onChange={this.locationChange.bind(this)}
             />
           </Col>
         </Row>
@@ -214,7 +214,7 @@ class UpdateUserInfo extends Component {
               fullWidth
               variant="outlined"
               value={this.state.email}
-              onChange={() => this.emailChange.bind(this)}
+              onChange={this.emailChange.bind(this)}
             />
           </Col>
         </Row>
@@ -228,7 +228,7 @@ class UpdateUserInfo extends Component {
               fullWidth
               multiline
               rows="4"
-              onChange={() => this.aboutChange.bind(this)}
+              onChange={this.aboutChange.bind(this)}
             />
           </Col>
         </Row>
