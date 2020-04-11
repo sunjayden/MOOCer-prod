@@ -5,7 +5,7 @@ class Footer extends Component {
   render() {
     let footerStyle = { position: "absolute", width: "100%", bottom: "auto" };
     console.log(window.location.href);
-    if (window.location.href.endsWith('/') || window.location.href.endsWith('auth')) {
+    if (window.location.href.endsWith('/')) {
       footerStyle = { position: "absolute", width: "100%", bottom: 0 };
     }
     return (
