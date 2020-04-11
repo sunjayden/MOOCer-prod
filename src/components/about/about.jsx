@@ -7,6 +7,8 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Nav from "../header/navigation";
 import { SocialIcon } from "react-social-icons";
 
+import "./about.css"
+
 class About extends Component {
   state = {};
   render() {
@@ -15,7 +17,6 @@ class About extends Component {
         <Nav />
         <Container className="h-100 mb-5">
           <Row className="h-20 mt-5">
-            {/* align-items-center justify-content-center  */}
             <Col
               className="h-100 align-items-center justify-content-center"
               xs={{ span: 12 }}
@@ -118,7 +119,7 @@ class About extends Component {
                         backgroundColor: "#8ea6b2",
                       }}
                     >
-                      <Row className="align-self-center">
+                      <Row className="align-self-center intro">
                         <Col xs={5} className="align-items-center">
                           <Image
                             className="course-image align-self-center"
@@ -129,15 +130,13 @@ class About extends Component {
                         <Col xs={7} className="align-items-center">
                           <h3 style={{ color: "#f6f8fa" }}>Jayden Sun</h3>
                           <p
-                            className="course-summary"
+                            className="intro-summary"
                             style={{ color: "#f6f8fa" }}
                           >
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content. Some
-                            quick example text to build on the card title and
-                            make up the bulk of the card's content.Some quick
-                            example text to build on the card title and make up
-                            the bulk of the card's content.
+                            I'm first year master student at Georgia Tech with 
+                            specialization in Machine Learning. During my free
+                            time, I like to cook and build LEGOs. I enjoy coding
+                            and building apps.
                           </p>
                           <Row className="justify-content-end mr-3">
                             <SocialIcon
@@ -176,7 +175,7 @@ class About extends Component {
                         <Col xs={7} className="align-items-center">
                           <h3 style={{ color: "#f6f8fa" }}>Yuli Liu</h3>
                           <p
-                            className="course-summary"
+                            className="intro-summary"
                             style={{ color: "#f6f8fa" }}
                           >
                             I'm first year master student at Georgia Tech with
