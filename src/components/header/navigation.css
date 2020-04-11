@@ -1,0 +1,59 @@
+.vl {
+	border-left: 1px solid #525c65;
+	height: 22px;
+	margin-left: 24px;
+	margin-right: 36px;
+}
+
+.nav-link {
+	color: #525c65 !important;
+	font-size: 1.15rem;
+	font-weight: 400;
+	line-height: 1.9375rem;
+	margin-right: 14px;
+}
+
+.login-button {
+	margin-right: 6px;
+	border-radius: .2rem;
+}
+
+.signup-button {
+	margin-right: 24px;
+	border-radius: .2rem;
+}
+
+.signout-button {
+	margin-right: 24px;
+	border-radius: .2rem;
+}
+
+.nav-button {
+	padding: 0;
+}
+
+.dropdown {
+	margin-right: 50px;
+}
+
+.dropdown-menu.show {
+	left: -86px;
+	min-width: auto;
+}
+
+.dropdown-item {
+	padding: .25rem 1rem;
+}
+
+#dropdown-button-drop-left {
+	padding: 0.15rem .5rem;
+	font-size: 1.25rem;
+}
+
+.dropdown.nav-item {
+	margin-right: 0px;
+}
+
+.btn-primary:hover {
+    color: #fff;
+}

@@ -1,0 +1,42 @@
+.overflow-auto.card {
+	box-shadow: 2px 4px 8px 0px rgba(46, 61, 73, 0.2);
+}
+
+.sing-card {
+	width: 20rem;
+	height: 18rem;
+}
+
+.card-container {
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+}
+
+.author {
+	padding-top: 12px;
+	font-size: 24px;
+	padding-left: 0px;
+}
+
+.control-btn {
+	color: #47646f;
+	font-size: 1rem;
+	background: white;
+	border: 0;
+	display: block;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.right-arrow {
+	margin-left: 8px;
+}
+
+.previous-btn {
+	padding-left: 32px !important;
+}
+
+.left-arrow {
+	margin-left: 21px;
+}

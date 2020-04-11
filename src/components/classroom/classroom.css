@@ -1,0 +1,45 @@
+.class-container {
+	margin-bottom: 50px;
+	min-height: 75vh;
+}
+
+.card {
+	margin: 12px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card-link {
+	font-size: 15px;
+	line-height: 1.2;
+	font-weight: 600;
+	color: #1e383c;
+	margin-bottom: .75rem;
+	height: 24px;
+	display: inline-block;
+}
+
+.card-text {
+	font-size: 14px;
+	overflow: hidden;
+	height: 64px;
+}
+
+.card-body {
+	padding: 1rem;
+}
+
+.card-img-top {
+	height: 125px;
+	width: 238px;
+}
+
+.title {
+	font-size: 1rem !important;
+	font-weight: 600 !important;
+	letter-spacing: 1.5px;
+	line-height: 1.5rem !important;
+	text-transform: uppercase;
+	margin-top: 32px;
+	margin-bottom: 8px !important;
+	margin-left: 12px !important;
+}

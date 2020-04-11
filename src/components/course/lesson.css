@@ -1,0 +1,35 @@
+.btn-primary {
+  color: #f6f8fa;
+  background-color: #47646f;
+  border-color: #47646f;
+}
+
+.jumbotron {
+  /* background-color: #c3ccd3; */
+  background-color: #e5e9ed;
+}
+
+.h1,
+h1 {
+  color: #1e383c;
+}
+
+.h6,
+h6 {
+  color: #47646f;
+}
+
+.h5,
+h5 {
+  color: #1e383c;
+}
+
+.courseLinkButton {
+  margin-right: 18px;
+}
+
+.completedBtn {
+  pointer-events: none;
+  background-color: #13ab5e;
+  border-color: #13ab5e;
+}
