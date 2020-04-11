@@ -1,5 +1,5 @@
 const port = process.env.PORT || 8080;
 
 export const config  = {
-	API_URL: "http://localhost:" + port,
+	API_URL: "",
 };
