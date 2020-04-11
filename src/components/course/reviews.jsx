@@ -63,7 +63,7 @@ class Reviews extends Component {
   renderReviewCardList() {
     return this.state.reviews.map((review, index) => {
       return (
-        <ListGroup.Item key={index} className="border-bottom-0">
+        <ListGroup.Item key={index} className="border-bottom-0 review-card">
           <Card className="overflow-auto sing-card">
             <Card.Body>
               <Card.Title>
