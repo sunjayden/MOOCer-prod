@@ -35,10 +35,13 @@ npm install
 
 ### Database Setup
 
+Optional if the current MongoDB URI is still running.
+
 To use your own MongoDB server, replace DB_CONNECTION in .env file to your MongoDB URI.
 
 ### Data Import
-This is optional if the current MongoDB URI is still running.
+
+Optional if the current MongoDB URI is still running.
 
 The data import file is in server/data/ directory. Replace the MongoDB URI in the import.js file and import all the courses and reviews.
 
