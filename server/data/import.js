@@ -22,8 +22,8 @@ mongoose.connect('mongodb://admin:a123456@ds339648.mlab.com:39648/moocer', {
 // Import courses and reviews
 (async () => {
 	try {
-		// await udacityCourses();
-		// await udacityDegree();
+		await udacityCourses();
+		await udacityDegree();
 		await courseraCourses();
 	} catch (err) {
 		console.log(err);
