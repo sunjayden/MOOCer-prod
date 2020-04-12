@@ -166,3 +166,7 @@
 .show {
     visibility: visible;
 }
+
+.spinner-border.spinner-border-sm {
+    margin-right: 6px;
+}

@@ -48,14 +48,14 @@ router.get('/', async (req, res) => {
 	const perPage = parseInt(req.query.perPage) || 10;
 	const page = parseInt(req.query.page) || 1;
 	const free = req.query.free
-	const level = req.query.level
+	const platform = req.query.platform
 
 	var filter = {}
 	if (free) {
 		filter.isFreeCourse = free;
 	}
-	if (level) {
-		filter.level = level.toLowerCase();
+	if (platform) {
+		filter.platform = platform.toLowerCase();
 	}
 
 	const courses = await Course.find(filter, '-reviews')

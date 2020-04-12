@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Spinner} from "react-bootstrap";
 import { withRouter } from "react-router-dom";
 
 import { config } from '../../config';
@@ -13,7 +14,8 @@ class LoginBox extends Component {
 			email: "",
 			password: "",
 			errors: [],
-			loginError: ""
+			loginError: "",
+			loading: false
 		};
 	}
 
@@ -68,6 +70,8 @@ class LoginBox extends Component {
 		if (password === "") {
 			this.showValidationErr("password", "Password cannot be empty!");
 		}
+
+		this.setState({loading: true});
 
 		if (email && password) {
 			fetch(config.API_URL + "/api/user/login", {
@@ -149,7 +153,9 @@ class LoginBox extends Component {
 						className="login-btn"
 						onClick={this
 							.submitLogin
-							.bind(this)}>Login</button>
+							.bind(this)}>
+								{this.state.loading ? <Spinner animation="border" size="sm"/> : ""}
+								Login</button>
 				</div>
 			</div>
 		);

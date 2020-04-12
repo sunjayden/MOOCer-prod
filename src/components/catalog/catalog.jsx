@@ -21,7 +21,7 @@ class Catalog extends Component {
       max_page: 1,
       current_page: 0,
       selectedCourseOption: null,
-      selectedSkillOption: null,
+      selectedPlatformOption: null,
     };
   }
 
@@ -121,9 +121,9 @@ class Catalog extends Component {
       url = url + "&free=" + free;
     }
 
-    if (this.state.selectedLevelOption) {
-      let level = this.state.selectedLevelOption.value;
-      url = url + "&level=" + level;
+    if (this.state.selectedPlatformOption) {
+      let platform = this.state.selectedPlatformOption.value;
+      url = url + "&platform=" + platform;
     }
 
     fetch(url, {
@@ -157,8 +157,8 @@ class Catalog extends Component {
     this.setState({ selectedCourseOption });
   };
 
-  handleLevelChange = selectedLevelOption => {
-    this.setState({ selectedLevelOption });
+  handlePlatformChange = selectedPlatformOption => {
+    this.setState({ selectedPlatformOption });
   };
 
   submitFilter = () => {
@@ -171,13 +171,12 @@ class Catalog extends Component {
       { value: 'Paid Courses', label: 'Paid Courses' },
     ];
 
-    const levelOptions = [
-      { value: 'Beginner', label: 'Beginner' },
-      { value: 'Intermediate', label: 'Intermediate' },
-      { value: 'Advanced', label: 'Advanced' },
+    const platformOptions = [
+      { value: 'Udacity', label: 'Udacity' },
+      { value: 'Coursera', label: 'Coursera' }
     ];
 
-    const { selectedCourseOption, selectedLevelOption } = this.state;
+    const { selectedCourseOption, selectedPlatformOption } = this.state;
 
     return (
       <>
@@ -214,18 +213,18 @@ class Catalog extends Component {
                 <h4 className="filter-title">FILTER BY</h4>
                 <Select
                   className="option"
-                  value={selectedCourseOption}
-                  onChange={this.handleCourseChange}
-                  options={courseOptions}
-                  placeholder="COURSE TYPE"
+                  value={selectedPlatformOption}
+                  onChange={this.handlePlatformChange}
+                  options={platformOptions}
+                  placeholder="PLATFORM"
                 />
 
                 <Select
                   className="option"
-                  value={selectedLevelOption}
-                  onChange={this.handleLevelChange}
-                  options={levelOptions}
-                  placeholder="SKILL LEVEL"
+                  value={selectedCourseOption}
+                  onChange={this.handleCourseChange}
+                  options={courseOptions}
+                  placeholder="COURSE TYPE"
                 />
 
                 <Button className="btn btn-default filter-button" type="submit" onClick={this.submitFilter}>

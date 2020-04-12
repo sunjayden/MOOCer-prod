@@ -191,7 +191,7 @@ class CourseDetail extends Component {
             <Col className="details" xs={6}>
               <Row className="section">
                 <Col xs={4}>
-                  <h6>Course Cost</h6>
+                  <h6>Cost</h6>
                   <h5>{freeCourse}</h5>
                 </Col>
                 <Col xs={4}>
@@ -199,7 +199,7 @@ class CourseDetail extends Component {
                   <h5>Aprox. {this.state.duration}</h5>
                 </Col>
                 <Col xs={4}>
-                  <h6>Skill Level</h6>
+                  <h6>Type</h6>
                   <h5>{captalize(this.state.level)}</h5>
                 </Col>
               </Row>
@@ -219,11 +219,11 @@ class CourseDetail extends Component {
             </Col>
           </Row>
 
-          <Row>
+          {this.state.lessons.length !== 0 ? <Row>
             <Col className="lesson" xs={12}>
               <Lessons lessonList={this.state.lessons} />
             </Col>
-          </Row>
+          </Row> : <Row><Col className="cluter" style={{margin: "24px 0px 24px 0px"}}></Col></Row>}
 
           <Row className="Reviews">
             <Col xs={12}>

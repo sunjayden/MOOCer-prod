@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import { Spinner } from "react-bootstrap";
 
 import { config } from '../../config';
 import { setInStorage } from "../utils/storage";
@@ -14,7 +15,8 @@ class RegisterBox extends Component {
       password: "",
       errors: [],
       pwdState: null,
-      signupError: ""
+      signupError: "",
+      loading: false
     };
   }
 
@@ -71,8 +73,8 @@ class RegisterBox extends Component {
   }
 
   emailIsValid(email) {
-		return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-	}
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+  }
 
   submitRegister(e) {
     const { firstName, lastName, email, password } = this.state;
@@ -88,12 +90,14 @@ class RegisterBox extends Component {
     }
 
     if (!this.emailIsValid(email)) {
-			this.showValidationErr("email", "Email must be a valid email!");
+      this.showValidationErr("email", "Email must be a valid email!");
     }
-    
+
     if (password.length < 6) {
       this.showValidationErr("password", "Password must be greater than 6 characters!");
     }
+
+    this.setState({ loading: true });
 
     if (firstName && lastName && email && password) {
       fetch(config.API_URL + "/api/user/register", {
@@ -114,7 +118,7 @@ class RegisterBox extends Component {
             setInStorage("moocer", { token: json.token });
             this.props.history.push("/portfolio/edit");
           } else {
-            this.setState({signupError: json.message});
+            this.setState({ signupError: json.message });
           }
         });
     }
@@ -235,6 +239,7 @@ class RegisterBox extends Component {
             className="login-btn"
             onClick={this.submitRegister.bind(this)}
           >
+            {this.state.loading ? <Spinner animation="border" size="sm" /> : ""}
             Register
           </button>
         </div>
