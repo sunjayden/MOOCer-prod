@@ -1,8 +1,8 @@
 # MOOCer-Platform
 
-Production - A comprehensive platform for online course management.
+A comprehensive platform for online course management. https://moocer.herokuapp.com/
 
-This repository contains source code for MOOCer 2.0. MOOCer 2.0 is a fullstack application with Express Node.js backend and REACT frontend.
+This repository contains source code for MOOCer 2.0. MOOCer 2.0 is a fullstack Javscript application with ExpressJS backend and React frontend.
 
 ## Instructions
 
@@ -38,8 +38,9 @@ npm install
 ```
 npm run build
 
-npm run start
+npm start
 ```
+Navigate to localhost:8080 to view the platform.
 
 ### Project Structure
 
@@ -57,10 +58,10 @@ MOOCer
   |__robots.txt
 |__server *** Backend Folder ***
   |__validation.js
-  |__data
+  |__data *** Data Source Folder ***
     |__import.js
     |__udacity.js
-  |__mdoels
+  |__models
     |__Course.js
     |__Review.js
     |__User.js
