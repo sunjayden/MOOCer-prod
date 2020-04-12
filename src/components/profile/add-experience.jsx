@@ -216,7 +216,7 @@ class AddExperience extends Component {
               label="Description"
               fullWidth
               variant="outlined"
-              onChange={() => this.descriptionChange.bind(this)}
+              onChange={this.descriptionChange.bind(this)}
             />
           </Col>
         </Row>
