@@ -33,6 +33,15 @@ To install the required packages.
 npm install
 ```
 
+### Database Setup
+
+To use your own MongoDB server, replace DB_CONNECTION in .env file to your MongoDB URI.
+
+### Data import
+This is optional is the current MongoDB URI is still running.
+
+The data import file is in server/data/ directory. Replace the MongoDB URI in the import.js file and run ```node import.js``` to import all the courses and reviews.
+
 ### To Run the Project
 
 ```
@@ -61,6 +70,7 @@ MOOCer
   |__data *** Data Source Folder ***
     |__import.js
     |__udacity.js
+    |__coursera.js
   |__models
     |__Course.js
     |__Review.js
@@ -127,6 +137,4 @@ MOOCer
     |__utils
       |__auth.jsx
       |__storage.jsx
-
-
 ```
