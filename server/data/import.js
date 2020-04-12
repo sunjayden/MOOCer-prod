@@ -3,13 +3,16 @@ const mongoose = require('mongoose');
 const {
 	udacityCourses, udacityDegree
 } = require('./udacity');
+const {
+	courseraCourses
+} = require('./coursera');
 require('dotenv').config()
 
 // Import environment variable
 dotenv.config();
 
 // Connect to DB
-mongoose.connect(process.env.DB_CONNECTION, {
+mongoose.connect('mongodb://admin:a123456@ds339648.mlab.com:39648/moocer', {
 		useNewUrlParser: true,
 		useUnifiedTopology: true
 	},
@@ -19,11 +22,10 @@ mongoose.connect(process.env.DB_CONNECTION, {
 // Import courses and reviews
 (async () => {
 	try {
-		await udacityCourses();
-		await udacityDegree();
+		// await udacityCourses();
+		// await udacityDegree();
+		await courseraCourses();
 	} catch (err) {
 		console.log(err);
-	} finally {
-		// process.exit()
 	}
 })();
