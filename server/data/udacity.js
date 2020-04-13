@@ -99,7 +99,7 @@ function convertDegree(degree) {
 		summary: removeHtmlTags(degree.summary),
 		tags: combineTags(degree.tags, degree.tracks, degree.skills),
 		title: degree.title,
-		platform: 'Udacity',
+		platform: 'udacity',
 		degree: true
 	});
 }

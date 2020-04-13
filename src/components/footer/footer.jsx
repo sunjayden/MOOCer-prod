@@ -4,7 +4,6 @@ import { FaHeart } from "react-icons/fa";
 class Footer extends Component {
   render() {
     let footerStyle = { position: "absolute", width: "100%", bottom: "auto" };
-    console.log(window.location.href);
     if (window.location.href.endsWith('/')) {
       footerStyle = { position: "absolute", width: "100%", bottom: 0 };
     }

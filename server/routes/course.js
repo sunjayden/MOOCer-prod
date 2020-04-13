@@ -47,12 +47,12 @@ router.get('/search', async (req, res) => {
 router.get('/', async (req, res) => {
 	const perPage = parseInt(req.query.perPage) || 10;
 	const page = parseInt(req.query.page) || 1;
-	const free = req.query.free
+	const free = req.query.free;
 	const platform = req.query.platform
 
 	var filter = {}
 	if (free) {
-		filter.isFreeCourse = free;
+		filter.isFreeCourse = free === 'true' ? true : false;
 	}
 	if (platform) {
 		filter.platform = platform.toLowerCase();
