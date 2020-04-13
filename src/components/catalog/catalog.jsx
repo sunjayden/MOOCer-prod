@@ -117,7 +117,7 @@ class Catalog extends Component {
     }
 
     if (this.state.selectedCourseOption) {
-      let free = this.state.selectedCourseOption.value === "Free courses" ? true : false;
+      let free = this.state.selectedCourseOption.value === "Free Course" ? true : false;
       url = url + "&free=" + free;
     }
 
@@ -167,8 +167,8 @@ class Catalog extends Component {
 
   render() {
     const courseOptions = [
-      { value: 'Free Courses', label: 'Free Courses' },
-      { value: 'Paid Courses', label: 'Paid Courses' },
+      { value: 'Free Course', label: 'Free Course' },
+      { value: 'Paid Course', label: 'Paid Course' },
     ];
 
     const platformOptions = [
