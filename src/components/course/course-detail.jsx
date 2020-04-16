@@ -143,7 +143,7 @@ class CourseDetail extends Component {
   }
 
   render() {
-    let freeCourse = this.state.isFreeCourse === true ? "Free " : "";
+    let freeCourse = this.state.isFreeCourse === true ? "Free " : "Paid";
 
     let captalize = (str) => {
       return str.slice(0, 1).toUpperCase() + str.slice(1);
